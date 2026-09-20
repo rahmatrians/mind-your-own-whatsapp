@@ -1,0 +1,59 @@
+:root {
+  --wa-privacy-blur: 8px;
+}
+
+/* =========================================================
+   BLUR OTOMATIS LEWAT CSS (TANPA REPEAT JAVASCRIPT)
+   ========================================================= */
+
+/* Text Blur */
+html.wa-privacy-blurText #main .selectable-text,
+html.wa-privacy-blurText #main [dir="auto"] {
+  filter: blur(var(--wa-privacy-blur)) !important;
+  transition: filter 0.15s ease !important;
+  user-select: none !important;
+}
+
+/* Images Blur */
+html.wa-privacy-blurImages #main img[src^="blob:"],
+html.wa-privacy-blurImages #main img[src^="data:"],
+html.wa-privacy-blurImages [data-testid="media-viewer"] img {
+  filter: blur(var(--wa-privacy-blur)) !important;
+  transition: filter 0.15s ease !important;
+}
+
+/* Videos Blur */
+html.wa-privacy-blurVideos #main video {
+  filter: blur(var(--wa-privacy-blur)) !important;
+  transition: filter 0.15s ease !important;
+}
+
+/* Avatars Blur */
+html.wa-privacy-blurAvatars img[src*="dyn"],
+html.wa-privacy-blurAvatars header img,
+html.wa-privacy-blurAvatars #pane-side img {
+  filter: blur(var(--wa-privacy-blur)) !important;
+  transition: filter 0.15s ease !important;
+}
+
+/* Names Blur */
+html.wa-privacy-blurNames #pane-side span[title],
+html.wa-privacy-blurNames #main header span[title] {
+  filter: blur(var(--wa-privacy-blur)) !important;
+  transition: filter 0.15s ease !important;
+}
+
+/* =========================================================
+   HOVER REVEAL LEWAT CSS
+   ========================================================= */
+
+html.wa-privacy-revealOnHover #main .selectable-text:hover,
+html.wa-privacy-revealOnHover #main [dir="auto"]:hover,
+html.wa-privacy-revealOnHover #main img:hover,
+html.wa-privacy-revealOnHover #main video:hover,
+html.wa-privacy-revealOnHover #pane-side img:hover,
+html.wa-privacy-revealOnHover #pane-side span[title]:hover,
+html.wa-privacy-revealOnHover #main header span[title]:hover {
+  filter: none !important;
+  user-select: text !important;
+}

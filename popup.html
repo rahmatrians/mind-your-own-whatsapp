@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Privacy Blur</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <h1>Mind Your Own WhatsApp</h1>
+        <p>Keep damn nosey eyes off</p>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" id="enabled">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="status" id="status">
+      Protection enabled
+    </div>
+
+    <div class="section">
+
+      <div class="section-title">
+        <span>Blur strength</span>
+        <strong id="blurValue">8px</strong>
+      </div>
+
+      <input type="range" id="blur" min="2" max="20" value="8">
+
+    </div>
+
+    <div class="section">
+
+      <div class="option">
+        <span>Text</span>
+        <input type="checkbox" id="blurText">
+      </div>
+
+      <div class="option">
+        <span>Images</span>
+        <input type="checkbox" id="blurImages">
+      </div>
+
+      <div class="option">
+        <span>Videos</span>
+        <input type="checkbox" id="blurVideos">
+      </div>
+
+      <div class="option">
+        <span>Profile pictures</span>
+        <input type="checkbox" id="blurAvatars">
+      </div>
+
+      <div class="option">
+        <span>Names</span>
+        <input type="checkbox" id="blurNames">
+      </div>
+
+      <div class="option">
+        <span>Reveal on hover</span>
+        <input type="checkbox" id="revealOnHover">
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="shortcut">
+        <span>Shortcut</span>
+        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
+      </div>
+      <div class="meta">
+        <span class="author">
+          Author by <a href="https://github.com/rahmatrians" target="_blank" rel="noopener noreferrer">@rnzssh</a>
+        </span>
+        <span class="version">v0.1.0</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
